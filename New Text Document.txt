@@ -1,0 +1,52 @@
+#include<iostream>
+
+//Base Conversion Code
+//Made By: Arya Dyar Gard & Sina Ghavanlo
+//Associated Professor: Dr.Ebrahimi  
+//Entering Factors:
+//x= Target Number
+//n= Current Base
+//m= Desired Base
+//Exiting Factor:
+//h= Number in the Desired Base
+
+using namespace std;
+int main()
+{
+	int x, n, m, r, y, = 1, z, h = 0, p = 1;
+	
+	cout<<"Base Conversion App"<<"\n";
+	cout<<"Made By: Arya Dyar Gard & Sina Ghavanlo"<<"\n";
+    cout<<"Associated Professor: Dr.Ebrahimi"<<"\n\n";
+    
+    cout << "Please Insert the Starting Number." <<"\n";
+    cin >> x;
+    cout<<"Please Insert the Starting Number's Base."<<"\n";
+    cin>>n;
+    cout<<"Please Insert the Exiting Numbers Base."<<"\n";
+    cin>>m;
+    
+    
+    z = x;
+    if (n!=10)
+    {
+    	z = 0;
+    	while (x!=0)
+    	{
+    		r = x % 10;
+    		x = x / 10;
+    		z = z + y*r;
+    		y = y*n;
+    	}
+    }
+    while (z!=0)
+    {
+    	r = z%m;
+    	z = z / m;
+    	h = h + p*r;
+    	p = p * 10;
+    }
+    cout <<"Starting Number's Conversion to Base "<<"\0"<<m<<"\0"<<" Equals to \0"<<h<<"\0"<<;
+    
+    return 0;
+}
